@@ -1,0 +1,13 @@
+Act as an expert in database architecture. Given the following project requirements, select the most suitable type of database (relational, NoSQL, graph, etc.) and a specific database technology. Explain your choice step by step, considering the pros and cons of each option.
+
+Project requirements:
+- Social platform with millions of users
+- Need to store user profiles, posts, and connections (friendships/follows) between users
+- High data read speed required
+- Expected workload: 80% read operations, 20% write operations
+- Scalability is important as the user base grows
+
+Please provide:
+1. The type of database you recommend and why.
+2. The specific database technology you suggest.
+3. A step-by-step explanation of your reasoning (Chain-of-Thought reasoning), addressing each requirement and the final result.
