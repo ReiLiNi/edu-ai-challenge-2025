@@ -1,0 +1,14 @@
+Turn the following note into a detailed bug report using the format below. Do not fill in any missing details with assumptions just add placeholders if needed. 
+
+Note:
+Logout button doesn’t work on Safari. It just doesn’t respond.
+
+Bug Report Format:
+
+Title:
+Description:
+Steps to Reproduce:
+Expected vs Actual Behavior:
+Environment: 
+Severity or Impact:
+Please write the bug report in markdown, following this format exactly.
