@@ -1,0 +1,12 @@
+Given the following input text (provided as a file), please:
+
+- Generate a concise summary of the input text. 
+- Analyze the sentiment of the text and classify it as positive, neutral, or negative. 
+- Provide a sentiment score (e.g., -1 for very negative, 0 for neutral, +1 for very positive). 
+- Return all results in a structured JSON format, including: 
+  - The summary, 
+  - The sentiment classification, 
+  - The sentiment score, 
+  - Any relevant metadata you deem useful (such as word count, detected language, etc.).
+
+Process the file I provide according to these instructions.

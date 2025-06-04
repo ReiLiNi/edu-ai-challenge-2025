@@ -1,0 +1,17 @@
+{
+  "summary": "The text discusses the rising popularity of remote work, especially following the global pandemic. It highlights benefits such as improved job satisfaction, cost savings, and flexibility, while also noting challenges like isolation, reduced collaboration, and difficulty in maintaining productivity. The text concludes that remote work is likely to persist, with many companies adopting hybrid models supported by advancing technology.",
+  "sentiment_classification": "neutral",
+  "sentiment_score": 0,
+  "metadata": {
+    "word_count": 229,
+    "detected_language": "English",
+    "topics": [
+      "Remote work",
+      "Telecommuting",
+      "Workplace flexibility",
+      "Employee productivity",
+      "Hybrid work models",
+      "Technology in the workplace"
+    ]
+  }
+}
