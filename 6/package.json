@@ -1,0 +1,22 @@
+{
+  "name": "enigma-machine",
+  "version": "1.0.0",
+  "description": "WWII Enigma Machine Simulator",
+  "main": "enigma.js",
+  "scripts": {
+    "test": "node enigma.test.js",
+    "test:coverage": "c8 node enigma.test.js",
+    "test:coverage-html": "c8 --reporter=html node enigma.test.js",
+    "test:coverage-detailed": "c8 --reporter=html --reporter=text node enigma.test.js",
+    "test:coverage-check": "c8 --check-coverage node enigma.test.js",
+    "test:coverage-json": "c8 --reporter=json node enigma.test.js",
+    "coverage:open": "start coverage/index.html",
+    "coverage:clean": "rimraf coverage"
+  },
+  "keywords": ["enigma", "cryptography", "cipher", "wwii"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "c8": "^10.1.2"
+  }
+}

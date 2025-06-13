@@ -1,0 +1,17 @@
+{
+  "reporter": ["text", "html", "json"],
+  "check-coverage": true,
+  "lines": 75,
+  "functions": 90,
+  "branches": 90,
+  "statements": 75,
+  "exclude": [
+    "coverage/**",
+    "**/*.test.js",
+    "**/*.spec.js"
+  ],
+  "all": true,
+  "src": [
+    "enigma.js"
+  ]
+} 
