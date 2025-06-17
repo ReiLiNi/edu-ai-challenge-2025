@@ -1,169 +1,180 @@
-# Service Researcher
+# Service Researcher App
 
-A .NET Core console application that researches well-known services using OpenAI API and generates structured markdown reports.
+A .NET 8 console application that researches well-known services and generates comprehensive structured reports using OpenAI's API.
 
-## Project Structure
+## 🚀 Features
 
-```
-📂 ServiceResearcher/                  ← Solution Root
-├── ServiceResearcher.sln              ← Visual Studio Solution File
-├── README.md                          ← This file (also in Solution Items)
-├── .gitignore                         ← Git exclusions (also in Solution Items)
-└── ServiceResearcher/                 ← Project Directory
-    ├── Program.cs                     ← Main application logic
-    ├── ServiceResearcher.csproj       ← Project file
-    ├── appsettings.json               ← Base configuration (Solution Item)
-    └── appsettings.Development.json   ← Development configuration (Solution Item)
-```
+- **Automated Service Research**: Get detailed insights about any service or company
+- **Structured Reports**: Clean, professional markdown reports with standardized sections
+- **OpenAI Integration**: Powered by GPT models for accurate and comprehensive research
+- **Environment-Specific Configuration**: Separate settings for Development and Production
+- **Clean Output**: Automatically removes conversational AI responses for professional reports
 
-**Visual Studio Solution Explorer Structure:**
-```
-📁 Solution 'ServiceResearcher'
-├── 📁 Solution Items
-│   ├── 📄 README.md
-│   ├── 📄 .gitignore
-│   ├── 📄 appsettings.json
-│   └── 📄 appsettings.Development.json
-└── 📁 ServiceResearcher (Project)
-    ├── 📄 Program.cs
-    ├── 📄 ServiceResearcher.csproj
-    ├── 📄 appsettings.json
-    └── 📄 appsettings.Development.json
-```
+## 📋 Prerequisites
 
-## Features
+- **.NET 8 SDK** or later
+- **Visual Studio 2022** (recommended) or Visual Studio Code
+- **OpenAI API Key** with appropriate model access
 
-- Interactive console interface for service input
-- OpenAI API integration for comprehensive service research
-- Structured output with predefined sections:
-  - Brief History
-  - Target Audience
-  - Core Features
-  - Unique Selling Points
-  - Business Model
-  - Tech Stack Insights
-  - Perceived Strengths
-  - Perceived Weaknesses
-- Automatic markdown file generation with timestamps
+## ⚙️ Setup Instructions
 
-## Setup
+### 1. Clone and Open Project
 
-### Prerequisites
+1. Open **Visual Studio 2022**
+2. Open the solution file: `ServiceResearcherApp.sln`
+3. The project should automatically restore NuGet packages
 
-- .NET 9.0 or later
-- OpenAI API key
+### 2. Configure API Key
 
-### Installation
-
-1. **Open the project:**
-   - **Option A (Visual Studio):** Double-click `ServiceResearcher.sln` to open in Visual Studio
-   - **Option B (Command Line):** Navigate to the solution directory
-
-2. **Restore dependencies:**
-   ```bash
-   dotnet restore
-   ```
-
-### Configuration
-
-You can provide your OpenAI API key in three ways:
-
-#### Option 1: Development Configuration File (Recommended)
-1. In Visual Studio, find `appsettings.Development.json` in the Solution Items folder or project
-2. Edit the file and replace the placeholder with your actual OpenAI API key:
-   ```json
-   {
-     "OpenAI": {
-       "ApiKey": "sk-your-actual-api-key-here"
-     },
-     "Logging": {
-       "LogLevel": {
-         "Default": "Information",
-         "Microsoft.Extensions": "Warning"
-       }
-     }
-   }
-   ```
-   **Note:** This file is automatically excluded from git commits to protect your API key.
-
-#### Option 2: Environment Variable
-Set the `OPENAI_API_KEY` environment variable:
-
-**Windows (PowerShell):**
-```powershell
-$env:OPENAI_API_KEY="sk-your-actual-api-key-here"
+**Option A: Development Configuration (Recommended for testing)**
+1. Open `ServiceResearcherApp/appsettings.Development.json`
+2. Add your OpenAI API key:
+```json
+{
+  "OpenAI": {
+    "ApiKey": "your-openai-api-key-here"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.Extensions": "Warning"
+    }
+  }
+}
 ```
 
-**Windows (Command Prompt):**
-```cmd
-set OPENAI_API_KEY=sk-your-actual-api-key-here
-```
+**Option B: Environment Variable**
+1. Set the environment variable `OPENAI_API_KEY` in your system
+2. Or set `DOTNET_ENVIRONMENT=Development` to use the development configuration
 
-**Linux/macOS:**
+**Option C: Production Configuration**
+1. Open `ServiceResearcherApp/appsettings.json`
+2. Add your API key (not recommended for source control)
+
+### 3. Set Environment (Optional)
+
+To use Development configuration by default:
+1. Right-click the **ServiceResearcherApp** project in Solution Explorer
+2. Select **Properties**
+3. Go to **Debug** → **General**
+4. Click **Open debug launch profiles UI**
+5. Add environment variable: `DOTNET_ENVIRONMENT` = `Development`
+
+## 🏃‍♂️ Running the Application
+
+### From Visual Studio
+
+1. **Set as Startup Project**: Right-click `ServiceResearcherApp` project → **Set as Startup Project**
+2. **Run**: Press `F5` or click the **Start** button
+3. **Follow prompts**: Enter the name of the service you want to research when prompted
+
+### From Command Line
+
 ```bash
-export OPENAI_API_KEY=sk-your-actual-api-key-here
+cd ServiceResearcherApp
+dotnet run
 ```
 
-#### Option 3: Base Configuration File (Not Recommended)
-Edit `ServiceResearcher/appsettings.json` directly, but be careful not to commit your API key to version control.
+### Sample Usage
 
-## Usage
+```
+=== Service Researcher ===
+This tool researches well-known services and generates structured reports.
 
-### Using Visual Studio
-1. Open `ServiceResearcher.sln` in Visual Studio
-2. Set ServiceResearcher as the startup project (if not already)
-3. Configure your API key in `appsettings.Development.json` (visible in Solution Items)
-4. Press F5 or click "Start Debugging"
+Configuration loaded for environment: Development
+✓ API key loaded from configuration file (length: 164)
+Enter the name of the service to research: Netflix
 
-### Using Command Line
-1. Build the solution:
-   ```bash
-   dotnet build
-   ```
+Researching 'Netflix'...
+Research completed! Results saved to: Netflix_20250617_143022.md
+```
 
-2. Run the application:
-   ```bash
-   dotnet run --project ServiceResearcher
-   ```
+## 📁 Generated Files Location
 
-3. Enter the name of the service you want to research when prompted
+### When Running from Visual Studio
+Reports are saved in the **project output directory**:
+```
+ServiceResearcherApp/bin/Debug/net8.0/
+```
 
-4. Wait for the research to complete
+### When Running from Command Line
+Reports are saved in the **project root directory**:
+```
+ServiceResearcherApp/
+```
 
-5. The application will generate a markdown file with the research results
+### File Naming Convention
+```
+{ServiceName}_{Timestamp}.md
+```
+Examples:
+- `Netflix_20250617_143022.md`
+- `Discord_20250617_144015.md`
+- `GitHub_20250617_145300.md`
 
-## Output Format
+## 📊 Report Structure
 
-The generated markdown files include:
-- Service name and generation timestamp
-- Structured research sections as specified
-- Professional formatting with headers and dividers
+Each generated report contains:
 
-## Example Services to Research
+- **Brief History**: Founding, milestones, evolution
+- **Target Audience**: User segments and demographics  
+- **Core Features**: Key functionalities
+- **Unique Selling Points**: Competitive differentiators
+- **Business Model**: Revenue generation methods
+- **Tech Stack Insights**: Technologies and platforms used
+- **Perceived Strengths**: Positive aspects and standout features
+- **Perceived Weaknesses**: Limitations and improvement areas
 
-- Netflix
-- Spotify
-- GitHub
-- Slack
-- Discord
-- Zoom
-- Dropbox
-- Airbnb
-- Uber
+## 🔧 Configuration Details
 
-## Notes
+### Supported Models
+The app automatically tries multiple OpenAI models in order of preference:
+- gpt-4.1-mini
 
-- Files are saved with the format: `ServiceName_YYYYMMDD_HHMMSS.md`
-- Special characters in service names are automatically cleaned for filenames
-- The application uses GPT-4o-mini model for cost-effective research
-- Research quality depends on publicly available information about the service
-- `appsettings.Development.json` is excluded from git commits to protect your API key
-- Configuration files are visible in Visual Studio Solution Explorer under "Solution Items"
 
-## Troubleshooting
+### Configuration Loading Order
+1. `appsettings.json` (base configuration)
+2. `appsettings.{Environment}.json` (environment-specific overrides)
+3. Environment variables (highest priority)
 
-- **"Please set your OpenAI API key"**: Ensure your API key is properly configured in `appsettings.Development.json` or environment variables
-- **Network errors**: Check your internet connection and API key validity
-- **File permission errors**: Ensure the application has write permissions in the current directory
-- **Configuration not loading**: Verify that `appsettings.Development.json` is in the correct directory and properly formatted
-- **Files not visible in Visual Studio**: Check the Solution Items folder in Solution Explorer 
+### Debug Information
+The app displays helpful information when starting:
+- Current working directory
+- Configuration environment detected
+- API key loading status
+- Configuration files found
+
+## 🏗️ Project Structure
+
+```
+ServiceResearcherApp/
+├── ServiceResearcherApp/
+│   ├── Program.cs              # Main application logic
+│   ├── ServiceResearcherApp.csproj  # Project file with dependencies
+│   ├── appsettings.json        # Base configuration
+│   ├── appsettings.Development.json  # Development configuration
+│   └── bin/Debug/net8.0/       # Output directory (generated files here)
+├── ServiceResearcherApp.sln    # Solution file
+└── README.md                   # This file
+```
+
+## 📦 Dependencies
+
+- **OpenAI** (v2.1.0) - OpenAI API integration
+- **Microsoft.Extensions.Configuration** (v8.0.0) - Configuration management
+- **Microsoft.Extensions.Configuration.Json** (v8.0.1) - JSON configuration support
+- **Microsoft.Extensions.Configuration.EnvironmentVariables** (v8.0.0) - Environment variable support
+
+## 🎯 Tips for Best Results
+
+1. **Use specific service names**: "Netflix" works better than "streaming service"
+2. **Try well-known services**: Popular services have more available information
+3. **Check generated reports**: Reports are comprehensive and ready for business use
+4. **Archive reports**: Files include timestamps for easy organization
+
+## 📝 License
+
+This project is for educational and research purposes.
+
+---
+*Happy researching! 🔍* 

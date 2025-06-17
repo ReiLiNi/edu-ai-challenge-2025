@@ -12,11 +12,6 @@ bld/
 [Oo]bj/
 [Ll]og/
 
-# Configuration files with secrets
-appsettings.Development.json
-appsettings.*.json
-!appsettings.json
-
 # Generated research reports
 *.md
 !README.md
