@@ -1,0 +1,109 @@
+Product Filter Console App
+==========================
+Loaded 50 products from products.json
+Using OpenAI API key from configuration
+Products dataset will be passed to OpenAI for direct filtering
+
+Enter your product filter request (or 'quit' to exit):
+> i need the best electronics
+Processing your request with OpenAI...
+
+Filtered Products:
+1. Gaming Laptop - $1299.99, Rating: 4.8, Out of Stock
+2. Noise-Cancelling Headphones - $299.99, Rating: 4.8, In Stock
+3. 4K Monitor - $349.99, Rating: 4.7, In Stock
+4. Smart Watch - $199.99, Rating: 4.6, In Stock
+
+Results saved to: filtered_products_20250618_143350.txt
+
+Enter your product filter request (or 'quit' to exit):
+> i need the best items for kithcen that are available now
+Processing your request with OpenAI...
+
+Filtered Products:
+1. Pressure Cooker - $99.99, Rating: 4.7, In Stock
+2. Air Fryer - $89.99, Rating: 4.6, In Stock
+3. Blender - $49.99, Rating: 4.2, In Stock
+4. Coffee Maker - $79.99, Rating: 4.3, In Stock
+5. Electric Kettle - $39.99, Rating: 4.4, In Stock
+6. Rice Cooker - $59.99, Rating: 4.3, In Stock
+7. Toaster - $29.99, Rating: 4.1, In Stock
+
+Results saved to: filtered_products_20250618_143455.txt
+
+Enter your product filter request (or 'quit' to exit):
+> i need only the best items for kitchen
+Processing your request with OpenAI...
+
+Filtered Products:
+1. Air Fryer - $89.99, Rating: 4.6, In Stock
+2. Pressure Cooker - $99.99, Rating: 4.7, In Stock
+
+Results saved to: filtered_products_20250618_143539.txt
+
+Enter your product filter request (or 'quit' to exit):
+> do you have sport equipment available
+Processing your request with OpenAI...
+
+Filtered Products:
+1. Yoga Mat - $19.99, Rating: 4.3, In Stock
+2. Dumbbell Set - $149.99, Rating: 4.7, In Stock
+3. Exercise Bike - $499.99, Rating: 4.5, In Stock
+4. Resistance Bands - $14.99, Rating: 4.1, In Stock
+5. Kettlebell - $39.99, Rating: 4.3, In Stock
+6. Foam Roller - $24.99, Rating: 4.5, In Stock
+7. Pull-up Bar - $59.99, Rating: 4.4, In Stock
+8. Jump Rope - $9.99, Rating: 4.0, In Stock
+9. Ab Roller - $19.99, Rating: 4.2, In Stock
+
+Results saved to: filtered_products_20250618_144210.txt
+
+Enter your product filter request (or 'quit' to exit):
+> i need sport equipment with heigh raiting but under the 200 dollors
+Processing your request with OpenAI...
+
+Filtered Products:
+1. Dumbbell Set - $149.99, Rating: 4.7, In Stock
+2. Yoga Mat - $19.99, Rating: 4.3, In Stock
+3. Foam Roller - $24.99, Rating: 4.5, In Stock
+4. Pull-up Bar - $59.99, Rating: 4.4, In Stock
+
+Results saved to: filtered_products_20250618_144334.txt
+
+Enter your product filter request (or 'quit' to exit):
+> ans sport equipment with raiting more than 4.5 and price under 200$
+Processing your request with OpenAI...
+
+Filtered Products:
+1. Dumbbell Set - $149.99, Rating: 4.7, In Stock
+
+Results saved to: filtered_products_20250618_144456.txt
+
+Enter your product filter request (or 'quit' to exit):
+> show me only the best items for kithchen that are available now
+Processing your request with OpenAI...
+
+Filtered Products:
+1. Air Fryer - $89.99, Rating: 4.6, In Stock
+2. Pressure Cooker - $99.99, Rating: 4.7, In Stock
+3. Electric Kettle - $39.99, Rating: 4.4, In Stock
+
+Results saved to: filtered_products_20250618_144603.txt
+
+Enter your product filter request (or 'quit' to exit):
+> show all available kithcen items
+Processing your request with OpenAI...
+
+Filtered Products:
+1. Blender - $49.99, Rating: 4.2, In Stock
+2. Air Fryer - $89.99, Rating: 4.6, In Stock
+3. Coffee Maker - $79.99, Rating: 4.3, In Stock
+4. Toaster - $29.99, Rating: 4.1, In Stock
+5. Electric Kettle - $39.99, Rating: 4.4, In Stock
+6. Rice Cooker - $59.99, Rating: 4.3, In Stock
+7. Pressure Cooker - $99.99, Rating: 4.7, In Stock
+
+Results saved to: filtered_products_20250618_144647.txt
+
+Enter your product filter request (or 'quit' to exit):
+>
