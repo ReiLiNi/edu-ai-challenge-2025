@@ -45,10 +45,12 @@ dotnet test
 
 ### Generating a Coverage Report
 
-To generate a code coverage report, run the following command. The report will be generated in the `CoverageReport` directory.
+To generate a code coverage report, run the following command from the root of the repository.
+
+This command executes the tests and creates a `coverage.cobertura.xml` file containing the raw coverage data. The file is located in a new `TestResults` directory inside the `ValidationFramework.Tests` project folder. Note that the exact path will include a randomly generated subfolder, for example: `ValidationFramework.Tests/TestResults/{some-random-guid}/coverage.cobertura.xml`.
 
 ```bash
-dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
+dotnet test --collect:"XPlat Code Coverage"
 ```
 
 ### Running from Visual Studio
