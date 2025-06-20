@@ -1,0 +1,42 @@
+{
+    "word_count": 1015,
+    "speaking_speed_wpm": 447,
+    "frequently_mentioned_topics": [
+      {
+        "topic": "Chest pain",
+        "mentions": 14
+      },
+      {
+        "topic": "Heart attack",
+        "mentions": 6
+      },
+      {
+        "topic": "Symptoms",
+        "mentions": 11
+      },
+      {
+        "topic": "Medications",
+        "mentions": 4
+      },
+      {
+        "topic": "Medical history",
+        "mentions": 5
+      },
+      {
+        "topic": "Family history",
+        "mentions": 3
+      },
+      {
+        "topic": "Diagnostic tests",
+        "mentions": 3
+      },
+      {
+        "topic": "Lifestyle habits",
+        "mentions": 4
+      },
+      {
+        "topic": "Emotional state/fear",
+        "mentions": 3
+      }
+    ]
+  }
